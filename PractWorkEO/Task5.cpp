@@ -11,14 +11,14 @@ double func5(int x) {
         mov ecx, 1 
 
         loop_start:
-        cmp ecx, x // Проверить, достигли ли x
-            jg loop_end // Если n > x, выйти из цикла
+        cmp ecx, x
+            jg loop_end
 
            
             mov eax, x
             fld qword ptr[eax]
             fmul st(0), st(0) // x ^ 2
-            fstp qword ptr[temp_x2] //Сохраняю x ^ 2 в temp_x2
+            fstp qword ptr[temp_x2] _
 
             
             mov eax, ecx
